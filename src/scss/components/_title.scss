@@ -1,0 +1,20 @@
+.title {
+  color: $color-primary;
+  font-size: 3.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6.8rem;
+  margin-bottom: 4rem;
+
+  &::after,
+  &::before {
+    content: "";
+    background-color: $color-primary;
+    width: 34%;
+    height: 1px;
+  }
+  &::after {
+  }
+}

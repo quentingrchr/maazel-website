@@ -1,0 +1,13 @@
+.bio {
+  width: 110rem;
+  margin: auto;
+  color: $color-primary;
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 21px;
+  text-align: justify;
+  margin-bottom: 2rem;
+  & em {
+    font-weight: 700;
+  }
+}

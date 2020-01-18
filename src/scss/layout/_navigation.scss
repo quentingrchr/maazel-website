@@ -1,0 +1,27 @@
+.nav {
+  color: $color-primary;
+  text-transform: uppercase;
+  width: 57rem;
+  height: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid $color-primary;
+  border-bottom: 1px solid $color-primary;
+  margin: auto;
+  margin-top: 4rem;
+  // margin-bottom: 2rem;
+
+  &__item {
+    width: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.1s ease-out, background-color 0.1s ease-out;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-secondary;
+    }
+  }
+}

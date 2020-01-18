@@ -1,0 +1,15 @@
+.footer {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6rem;
+  color: $color-primary;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  width: 28rem;
+}

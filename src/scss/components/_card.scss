@@ -1,0 +1,34 @@
+.card {
+  color: $color-primary;
+  margin: 0 auto;
+  width: 30rem;
+  height: 43rem;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__artwork {
+    border-radius: 3px;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+  }
+  &__artist {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::after {
+      margin-top: 2rem;
+      content: "";
+      background-color: $color-primary;
+      width: 30%;
+      height: 1px;
+    }
+  }
+  &__label {
+    font-size: 1.4rem;
+  }
+}
