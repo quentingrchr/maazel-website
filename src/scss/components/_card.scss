@@ -9,8 +9,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   &__artwork {
+    border: 3px solid transparent;
     border-radius: 3px;
+    &:hover {
+      border: 3px solid $color-primary;
+    }
   }
 
   &__title {

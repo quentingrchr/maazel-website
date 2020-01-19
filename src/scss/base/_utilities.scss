@@ -6,3 +6,19 @@
 .margin-bot-large {
   margin-bottom: 5rem;
 }
+
+.to-animate {
+  transform: translateY(50rem);
+  opacity: 0;
+  &:nth-child(even) {
+    transition: opacity 0.3s 0.1s ease-out, transform 0.3s 0.1s ease-out;
+  }
+  &:nth-child(odd) {
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+}
+
+.move-in-bot {
+  transform: translateY(0rem);
+  opacity: 1;
+}
