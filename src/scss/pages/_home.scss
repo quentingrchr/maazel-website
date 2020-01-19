@@ -1,5 +1,6 @@
 section {
-  width: 100vw;
+  width: 100%;
+  background-color: black;
   &.home {
     height: 130vh;
     background: linear-gradient(
@@ -10,8 +11,8 @@ section {
         rgba(17, 17, 17, 1) 90%
       ),
       url("../assets/img/bg--home.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +28,8 @@ section {
         rgba(17, 17, 17, 1) 90%
       ),
       url("../assets/img/bg--latest-releases.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &.other {
@@ -38,6 +41,8 @@ section {
         rgba(17, 17, 17, 1) 90%
       ),
       url("../assets/img/bg--other-releases.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &.about {
@@ -49,11 +54,16 @@ section {
         rgba(17, 17, 17, 1) 90%
       ),
       url("../assets/img/bg--about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
 .logo {
   margin-top: 11rem;
+  @media only screen and (max-width: $bp-xs) {
+    width: 70%;
+  }
 }
 
 .scroll-down {
@@ -62,10 +72,14 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &__text {
     color: $color-primary;
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
+    @media only screen and (max-width: $bp-sm) {
+      font-size: 3rem;
+    }
   }
   &__icon {
     margin-top: 1rem;
@@ -78,10 +92,6 @@ section {
   padding-bottom: 4rem;
 }
 
-.other .card {
-  margin-bottom: 8 rem;
-}
-
 .about {
   display: flex;
   flex-direction: column;
@@ -90,7 +100,10 @@ section {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    width: 110rem;
+    width: 80%;
     margin-bottom: 5rem;
+    & img {
+      width: 50%;
+    }
   }
 }

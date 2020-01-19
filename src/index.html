@@ -9,19 +9,33 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script defer src="javascript/script.js"></script>
 
     <title>Maazel beats</title>
   </head>
   <body>
-    <section class="home">
-      <img class="logo" src="./assets//img/logo.png" alt="logo" />
+    <section class="home" id="sectionHome">
+      <div class="icon-menu" id="icon-menu">
+        <div class="hamburger" id="hamburger"></div>
+      </div>
+      <menu class="menu">
+        <ul>
+          <a href="#sectionHome"><li>home</li></a>
+          <a href="#sectionReleases"><li>releases</li></a>
+          <a href="#sectionAbout"><li>about</li></a>
+          <a href="#"><li>contact</li></a>
+        </ul>
+      </menu>
+      <img class="logo" src="./assets/img/logo.png" alt="logo" />
       <ul class="nav">
-        <li class="nav__item">home</li>
-        <li class="nav__item">releases</li>
-        <li class="nav__item">about</li>
-        <li class="nav__item">contact</li>
+        <a href="#sectionHome" class="nav__item"><li>home</li></a>
+        <a href="#sectionReleases" class="nav__item"><li>releases</li></a>
+        <a href="#sectionAbout" class="nav__item"><li>about</li></a>
+        <a href="#" class="nav__item"><li>contact</li></a>
       </ul>
-      <button class="btn">listen now</button>
+      <a href="https://soundcloud.com/maazelbeats"
+        ><button class="btn">listen now</button></a
+      >
       <div class="scroll-down">
         <div class="scroll-down__text">Scroll down for more</div>
         <img
@@ -31,7 +45,7 @@
         />
       </div>
     </section>
-    <section class="latest">
+    <section class="latest" id="sectionReleases">
       <h1 class="title">Latest releases</h1>
       <div class="releases">
         <div class="releases__card card">
@@ -132,7 +146,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="sectionAbout">
       <div class="title">About Maazel</div>
       <p class="bio">
         Behind <em>Maazel</em> lies a Paris-based
@@ -169,39 +183,51 @@
         <img src="./assets/img/video1.jpg" alt="video" />
         <img src="./assets/img/video2.jpg" alt="video" />
       </div>
-      <button class="btn">send email</button>
+      <a href="mailto: hugo@qatataq.com" target="_blank"
+        ><button class="btn">send email</button></a
+      >
       <footer class="footer">
         <div class="socials">
-          <img
-            src="assets/img/icon--fb.svg"
-            alt="facebook"
-            class="socials__icon"
-          />
-          <img
-            src="assets/img/icon--insta.svg"
-            alt="instagram"
-            class="socials__icon"
-          />
-          <img
-            src="assets/img/icon--twitter.svg"
-            alt="twitter"
-            class="socials__icon"
-          />
-          <img
-            src="assets/img/icon--soundcloud.svg"
-            alt="soundcloud"
-            class="socials__icon"
-          />
-          <img
-            src="assets/img/icon--spotify.svg"
-            alt="spotify"
-            class="socials__icon"
-          />
-          <img
-            src="assets/img/icon--apple.svg"
-            alt="apple"
-            class="socials__icon"
-          />
+          <a href="https://www.facebook.com/maazelbeats" target="_blank"
+            ><img
+              src="assets/img/icon--fb.svg"
+              alt="facebook"
+              class="socials__icon"
+          /></a>
+          <a href="https://www.instagram.com/maazelbeats/" target="_blank">
+            <img
+              src="assets/img/icon--insta.svg"
+              alt="instagram"
+              class="socials__icon"
+          /></a>
+          <a href="https://twitter.com/maazelbeats" target="_blank"
+            ><img
+              src="assets/img/icon--twitter.svg"
+              alt="twitter"
+              class="socials__icon"
+          /></a>
+          <a href="https://soundcloud.com/maazelbeats" target="_blank">
+            <img
+              src="assets/img/icon--soundcloud.svg"
+              alt="soundcloud"
+              class="socials__icon"
+          /></a>
+          <a
+            href="https://open.spotify.com/artist/4w5LgUT6bfJnNq6wSFbND7?si=qUQb_vdlSB6XhBog780Hyg"
+            target="_blank"
+            ><img
+              src="assets/img/icon--spotify.svg"
+              alt="spotify"
+              class="socials__icon"
+          /></a>
+          <a
+            href="https://music.apple.com/us/artist/maazel/1148087232"
+            target="_blank"
+            ><img
+              src="assets/img/icon--apple.svg"
+              alt="apple"
+              class="socials__icon"
+          /></a>
         </div>
         <div class="copyright">© 2019 Maazel / qatataq</div>
       </footer>

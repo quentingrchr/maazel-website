@@ -5,6 +5,7 @@
   align-items: center;
   height: 6rem;
   color: $color-primary;
+  padding-bottom: 2rem;
 }
 
 .socials {
@@ -12,4 +13,24 @@
   justify-content: space-around;
   margin-bottom: 2rem;
   width: 28rem;
+
+  & a {
+    border-radius: 50%;
+    & img {
+      transition: transform 0.1s ease-in-out, filter 0.1s ease-in-out;
+    }
+    &:hover img {
+      transform: translateY(-5px);
+      filter: drop-shadow(5px 10px 10px black);
+    }
+
+    &:active img {
+      transform: translateY(0px);
+      filter: none;
+      outline: none;
+    }
+    &:focus img {
+      outline: 0;
+    }
+  }
 }

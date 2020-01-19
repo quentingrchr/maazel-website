@@ -12,8 +12,11 @@
   &::before {
     content: "";
     background-color: $color-primary;
-    width: 34%;
+    width: 35%;
     height: 1px;
+    @media only screen and (max-width: $bp-md) {
+      width: 20%;
+    }
   }
   &::after {
   }
