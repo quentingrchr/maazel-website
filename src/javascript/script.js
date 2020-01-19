@@ -22,6 +22,6 @@ toAnimate.forEach(element => {
     handler: function() {
       element.classList.add("move-in-bot");
     },
-    offset: "90%"
+    offset: "110%"
   });
 });
