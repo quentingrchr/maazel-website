@@ -7,6 +7,9 @@
   align-items: center;
   height: 6.8rem;
   margin-bottom: 4rem;
+  @media only screen and (max-width: $bp-xs) {
+    font-size: 2.3rem;
+  }
 
   &::after,
   &::before {
