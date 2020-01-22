@@ -3,6 +3,8 @@ const iconMenu = document.querySelector("#icon-menu");
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll("menu ul li");
 const toAnimate = document.querySelectorAll(".to-animate");
+const latestRelease = document.querySelector("#sectionReleases");
+const scrollDown = document.querySelector(".scroll-down");
 
 iconMenu.addEventListener("click", () => {
   hamburger.classList.toggle("menu-is-opened");
@@ -24,4 +26,13 @@ toAnimate.forEach(element => {
     },
     offset: "110%"
   });
+});
+
+let scrollDownHidden = new Waypoint({
+  element: latestRelease,
+  handler: function() {
+    console.log(scrollDown);
+    scrollDown.classList.add("hidden");
+  },
+  offset: "80%"
 });
