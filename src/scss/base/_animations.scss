@@ -57,10 +57,14 @@
   }
 }
 
-.dash  {
-  animation: dash 5s forwards;
+@keyframes navAnim {
+  to {
+    height: 6rem;
+  }
 }
 
-.fill {
-  animation: fill 3s forwards;
+@keyframes appears {
+  to {
+    opacity: 1;
+  }
 }
