@@ -60,9 +60,18 @@ section {
 }
 
 .logo {
-  margin-top: 11rem;
+  width: 30%;
+  margin-top: 15rem;
   @media only screen and (max-width: $bp-xs) {
     width: 70%;
+  }
+  & path {
+    border: 1px solid white;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    fill: transparent;
+    animation: dash 3s linear,
+      fill 1s 1.5s cubic-bezier(0.17, 0.67, 0.2, 1) forwards;
   }
 }
 

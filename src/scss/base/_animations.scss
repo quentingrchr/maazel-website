@@ -44,3 +44,23 @@
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
 }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  to {
+    fill: $color-primary;
+  }
+}
+
+.dash  {
+  animation: dash 5s forwards;
+}
+
+.fill {
+  animation: fill 3s forwards;
+}
