@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install ssh pass
+      run: sudo apt update && sudo apt install -y sshpass
+    - name: create .ssh directory
+      run: mkdir ~/.ssh
+    - name: Verify Host via SSH
+      run: ssh-keyscan 18.219.33.2 >> ~/.ssh/known_hosts
+    - name: Deploy website
+      run: sshpass -e scp -r * ubuntu@18.219.33.2:/home/ubuntu/site
+      env: 
+        SSHPASS: ${{ secrets.SSHPASS }}
