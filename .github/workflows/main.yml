@@ -14,13 +14,7 @@ jobs:
     - name: Verify Host via SSH
       run: ssh-keyscan 18.219.33.2 >> ~/.ssh/known_hosts
     - name: Deploy website
-      run: echo $SSH_KEY > private_key
-      env: 
-        SSH_KEY: ${{ secrets.SSH_KEY }}
-    - name: Debug
-      run: cat private_key
-    - name: Debug2
-      run: echo $SSH_KEY
+      run: echo $SSH_KEY > test
       env: 
         SSH_KEY: ${{ secrets.SSH_KEY }}
     - name: Install package
@@ -30,5 +24,5 @@ jobs:
     - name: Give permission
       run: chmod 600 private_key
     - name: Send website
-      run: scp -i private_key * ubuntu@18.219.33.2:/home/ubuntu/site
+      run: scp -i test * ubuntu@18.219.33.2:/home/ubuntu/site
       
