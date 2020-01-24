@@ -17,6 +17,8 @@ jobs:
       run: echo $SSH_KEY > private_key
       env: 
         SSH_KEY: ${{ secrets.SSH_KEY }}
+    - name: Debug
+      run: echo private_key
     - name: Install package
       run: npm install
     - name: Build
