@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: npm run build
     - name: Give permission
-      run: chmod 600 private_key
+      run: chmod 600 test
     - name: Send website
       run: scp -i test * ubuntu@18.219.33.2:/home/ubuntu/site
       
