@@ -17,6 +17,8 @@ jobs:
       run: ssh-agent -a /tmp/ssh-auth.sock
     - name: Export SSH Variable
       run: export SSH_AUTH_SOCK=/tmp/ssh-auth.sock
+    - name: debug ssh auth
+      run: echo $SSH_AUTH_SOCK
     - name: Deploy website
       env: 
         SSH_KEY: ${{ secrets.SSH_KEY }}
