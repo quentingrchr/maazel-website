@@ -15,9 +15,7 @@ jobs:
       run: ssh-keyscan 18.219.33.2 >> ~/.ssh/known_hosts
     - name: Start SSH Agent
       run: ssh-agent -a /tmp/ssh-auth.sock
-    - name: Export SSH Variable
-      run: export SSH_AUTH_SOCK=/tmp/ssh-auth.sock
-    - name: Deploy website
+    - name: Add SSH Key to Agent
       env: 
         SSH_KEY: ${{ secrets.MASSELOT }}
         SSH_AUTH_SOCK: /tmp/ssh-auth.sock
@@ -27,6 +25,6 @@ jobs:
     - name: Build
       run: npm run build
     - name: Send website
-      run: scp -r * ubuntu@18.219.33.2:/home/ubuntu/site
+      run: scp -r dist/* ubuntu@18.219.33.2:/home/ubuntu/site
       env: 
         SSH_AUTH_SOCK: /tmp/ssh-auth.sock
