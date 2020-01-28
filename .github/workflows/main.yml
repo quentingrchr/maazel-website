@@ -14,7 +14,9 @@ jobs:
     - name: Verify Host via SSH
       run: ssh-keyscan 18.219.33.2 >> ~/.ssh/known_hosts
     - name: Start SSH Agent
-      run: eval 'ssh-agent -s'
+      run: ssh-agent -a /tmp/ssh-auth.sock
+    - name: Export SSH Variable
+      run: export SSH_AUTH_SOCK=/tmp/ssh-auth.sock
     - name: Deploy website
       env: 
         SSH_KEY: ${{ secrets.SSH_KEY }}
