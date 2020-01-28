@@ -15,7 +15,7 @@ jobs:
       run: ssh-keyscan 18.219.33.2 >> ~/.ssh/known_hosts
     - name: Deploy website
       env: 
-        SSH_KEY: ${{ secrets.SSH_KEY }}
+        SSH_KEY: ${{ secrets.TEST }}
       run: echo $SSH_KEY > private_key
     - name: Install package
       run: npm install
